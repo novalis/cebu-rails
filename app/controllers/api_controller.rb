@@ -9,7 +9,7 @@ class ApiController < ApplicationController
     params[:vehicleId], params[:timestamp], params[:latStr], params[:lonStr],
     params[:velocity], params[:heading], params[:accuracy])
     if location
-    inference_service.processRecordFromWeb(location)
+      inference_service.processRecordFromWeb(location)
     end
     render :text=>""
   end
@@ -40,7 +40,7 @@ class ApiController < ApplicationController
 
   def traces
     inference_service = InferenceService.instance
-    @result = inference_service.getTraceResults(params[:vehicleId])
+    @traces = inference_service.getTraceResults(params[:vehicleId])
   end
 
   def vertex
