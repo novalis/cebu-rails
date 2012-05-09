@@ -1,0 +1,20 @@
+Install RVM:
+$ curl -L get.rvm.io | bash -s stable
+
+Install Jruby:
+$ rvm install jruby
+
+Use Jruby:
+$ rvm use jruby
+
+Install the bootstrapping gem:
+$ gem install bundler
+
+Install the rest:
+$ bundle install
+
+Install the Java libraries
+$ mvn package
+
+
+
