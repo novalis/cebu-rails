@@ -3,7 +3,6 @@ java_import Java::gov.sandia.cognition.math.matrix.mtj.decomposition.EigenDecomp
 java_import org.openplans.tools.tracking.impl.util.GeoUtils
 
 class InferenceResultRecord
-  ActiveSupport::Dependencies.explicitly_unloadable_constants << 'InferenceResultRecord' if Rails.env == 'development'
 
   attr_reader :originalLat, :originalLon, :kfMeanLat, :kfMeanLon, :kfMajorLat, :kfMajorLon, :kfMinorLat, :kfMinorLon, :graphSegmentIds, :time
   

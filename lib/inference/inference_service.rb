@@ -3,7 +3,6 @@ require 'java'
 java_import org.openplans.tools.tracking.impl.util.OtpGraph
 
 class InferenceService
-  ActiveSupport::Dependencies.explicitly_unloadable_constants << 'InferenceService' if Rails.env == 'development'
   include MonitorMixin
 
   @@graph = OtpGraph.new

@@ -6,7 +6,6 @@ java_import Java::gov.sandia.cognition.math.UnivariateStatisticsUtil
  #This class holds inference data for a particular vehicle 
  # @author bwillard
 class InferenceInstance
-  ActiveSupport::Dependencies.explicitly_unloadable_constants << 'InferenceInstance' if Rails.env == 'development'
   attr_reader :bestState, :prevTime, :belief, :observationMatrix, :vehicleId
  
   @@inferredGraph = InferredGraph.new(InferenceService.graph)
