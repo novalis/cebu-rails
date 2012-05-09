@@ -1,20 +1,32 @@
 Install RVM:
-$ curl -L get.rvm.io | bash -s stable
+    $ curl -L get.rvm.io | bash -s stable
 
 Install Jruby:
-$ rvm install jruby
+    $ rvm install jruby
 
 Use Jruby:
-$ rvm use jruby
+    $ rvm use jruby
 
 Install the bootstrapping gem:
-$ gem install bundler
+    $ gem install bundler
 
 Install the rest:
-$ bundle install
+    $ bundle install
 
 Install the Java libraries
-$ mvn package
+    $ mvn package
 
+Run:
+    $ rails server
 
+To use a development version of a library, you need to do the following
+before running rails server:
 
+    $ rm lib/name-of-library.jar
+
+    $ export CLASSPATH='lib/*'
+
+    $ ln -s /path/to/library/target/classes/* .
+
+Yes, you really have to put the library into the root directory of
+cebu-rails.  I'm not really sure why.
