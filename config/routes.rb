@@ -61,4 +61,6 @@ CebuRails::Application.routes.draw do
   get "api/segment" => "api#segment"
   get "api/traces" => "api#traces"
   get "api/vertex" => "api#vertex"
+
+  match "upload" => "upload#upload"
 end
