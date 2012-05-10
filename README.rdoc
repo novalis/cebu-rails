@@ -30,3 +30,16 @@ before running rails server:
 
 Yes, you really have to put the library into the root directory of
 cebu-rails.  I'm not really sure why.
+
+Remote debugging:
+
+You'll need to have openplans-tracking-tools set up in Eclipse as a maven
+project.
+
+    $ jruby -J-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 -J-Xdebug script/rails server
+
+The server will wait for a debugger to connect.
+
+Then, in eclipse, Run > Debug Configurations > Remote Java Application
+Click "new".  Select openplans-tracking-tools as the project.  Click
+"Debug".  Now you can place breakpoints and do all the usual things.
