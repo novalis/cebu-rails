@@ -37,6 +37,7 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 gem 'bundler'
+gem 'warbler'
 
 gem 'log4r', '1.1.10'
 gem 'rgeo'
